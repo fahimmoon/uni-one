@@ -17,6 +17,7 @@ export default function BottomNav() {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { t } = useLanguage();
+  const normalizePath = (p: string) => p.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 0);
@@ -47,7 +48,7 @@ export default function BottomNav() {
     { name: t('Grades', 'گریڈز'), href: '/grades', icon: GraduationCap, idx: 4 },
   ];
 
-  const activeIdx = mainItems.findIndex(item => pathname === item.href);
+  const activeIdx = mainItems.findIndex(item => normalizePath(pathname) === normalizePath(item.href));
 
   // High-precision math for fluid slider
   // 5 main items + 1 separator (0.4 fractional unit) + 1 hub button
@@ -130,7 +131,7 @@ export default function BottomNav() {
               <div className="grid grid-cols-4 gap-y-8 gap-x-4">
                 {category.items.map((item, itemIdx) => {
                   const Icon = item.icon;
-                  const isActive = pathname === item.href;
+                  const isActive = normalizePath(pathname) === normalizePath(item.href);
                   return (
                     <Link
                       key={item.href}
@@ -139,7 +140,7 @@ export default function BottomNav() {
                       className="flex flex-col items-center gap-3 group"
                       style={{ transitionDelay: `${(idx * 4 + itemIdx) * 30}ms` }}
                     >
-                      <div className={`w-14 h-14 rounded-[26px] transition-all duration-500 relative flex items-center justify-center group-hover:scale-115 group-hover:-translate-y-1 active:scale-90 shadow-sm ${isActive ? 'bg-slate-900 text-white shadow-2xl scale-110' : `${item.bg} ${item.color} group-hover:bg-white group-hover:shadow-2xl border border-transparent group-hover:border-slate-50`}`}>
+                      <div className={`w-14 h-14 rounded-[26px] transition-all duration-500 relative flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 active:scale-90 shadow-sm ${isActive ? 'bg-slate-900 text-white shadow-2xl scale-110' : `${item.bg} ${item.color} group-hover:bg-white group-hover:shadow-2xl border border-transparent group-hover:border-slate-50`}`}>
                         <Icon size={22} strokeWidth={isActive ? 2.5 : 2} className="relative z-10" />
                         {isActive && <span className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white animate-pulse shadow-lg shadow-blue-500/50"></span>}
                         <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 blur-xl transition-opacity"></div>
@@ -176,16 +177,16 @@ export default function BottomNav() {
           <div className="w-full flex items-center justify-between relative z-10">
             {mainItems.map((item) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href;
+              const isActive = normalizePath(pathname) === normalizePath(item.href);
               return (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`flex flex-col items-center justify-center flex-1 h-14 transition-all duration-500 relative
-                    ${isActive ? 'text-white' : 'text-slate-300 hover:text-slate-500'}`}
+                    ${isActive ? 'text-white' : 'text-slate-400 hover:text-slate-600 active:text-slate-700'}`}
                 >
                   <div className="flex flex-col items-center justify-center">
-                    <div className={`p-2 transition-all duration-500 ${isActive ? 'scale-110' : 'hover:scale-110 active:scale-95'}`}>
+                    <div className={`p-2 transition-all duration-500 ${isActive ? 'scale-110' : 'hover:scale-125 hover:-translate-y-0.5 active:scale-90'}`}>
                       <Icon size={22} strokeWidth={isActive ? 2.5 : 2} className="relative z-10" />
                     </div>
                     <span className={`text-[7px] font-black uppercase tracking-[0.2em] transition-all duration-500 mt-1 ${isActive ? 'opacity-100 text-white' : 'opacity-0 text-slate-400 translate-y-2'}`}>

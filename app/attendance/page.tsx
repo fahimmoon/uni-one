@@ -247,6 +247,7 @@ export default function AttendancePage() {
                         <div className="space-y-4 relative z-10">
                             <div className="relative">
                                 <select
+                                    name="attendanceCourse"
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-[12px] font-black text-white outline-none focus:ring-2 focus:ring-blue-500/50 appearance-none cursor-pointer hover:bg-white/10 transition-all shadow-inner"
                                     value={selectedCourseId || ""}
                                     onChange={(e) => setSelectedCourseId(e.target.value)}

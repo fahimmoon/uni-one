@@ -52,6 +52,7 @@ export default function NotesPage() {
                 </div>
                 <input
                     type="text"
+                    name="noteSearch"
                     title="Search Notes"
                     placeholder="Search by topic, course, or content..."
                     className="w-full bg-white border border-slate-100 rounded-[20px] py-3.5 pl-11 pr-4 text-xs font-medium shadow-sm focus:ring-2 focus:ring-blue-500/10 focus:border-blue-500/50 transition-all outline-none"

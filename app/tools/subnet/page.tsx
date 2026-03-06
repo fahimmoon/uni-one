@@ -64,6 +64,7 @@ export default function SubnetCalculatorPage() {
                                 Host IPv4 Address
                             </label>
                             <input
+                                name="ipAddress"
                                 title="IP Address"
                                 type="text"
                                 className="w-full bg-slate-50 border-none rounded-3xl py-5 px-6 text-base font-black text-slate-700 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none shadow-inner"
@@ -79,6 +80,7 @@ export default function SubnetCalculatorPage() {
                             <div className="relative">
                                 <span className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 font-black text-lg">/</span>
                                 <input
+                                    name="subnetMask"
                                     title="Subnet Mask"
                                     type="number"
                                     className="w-full bg-slate-50 border-none rounded-3xl py-5 pl-10 pr-6 text-base font-black text-slate-700 focus:ring-4 focus:ring-indigo-500/10 transition-all outline-none shadow-inner"

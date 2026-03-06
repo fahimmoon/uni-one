@@ -268,6 +268,7 @@ export default function BudgetPage() {
                                         <div className="relative group/search">
                                             <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within/search:text-indigo-500 transition-colors" />
                                             <input
+                                                name="transactionSearch"
                                                 value={searchQuery}
                                                 onChange={(e) => setSearchQuery(e.target.value)}
                                                 placeholder={t("Filter Vectors...", "فلٹر ویکٹر...")}
@@ -288,6 +289,7 @@ export default function BudgetPage() {
                                 <form onSubmit={handleAddTransaction} className="bg-white p-4 rounded-[32px] border border-slate-50 shadow-sm grid grid-cols-2 md:grid-cols-5 gap-3 relative overflow-hidden group">
                                     <div className="col-span-2 md:col-span-1">
                                         <input
+                                            name="transactionTitle"
                                             placeholder="Mission..."
                                             className="w-full bg-slate-50/50 border border-slate-50 rounded-2xl py-3 px-4 text-xs font-black text-slate-800 focus:bg-white focus:ring-4 focus:ring-indigo-500/10 transition-all outline-none"
                                             value={title}
@@ -299,6 +301,7 @@ export default function BudgetPage() {
                                             <span className="absolute left-3.5 top-1/2 -translate-y-1/2 font-black text-slate-300 text-[10px]">$</span>
                                             <input
                                                 type="number"
+                                                name="transactionAmount"
                                                 placeholder="0.00"
                                                 className="w-full bg-slate-50/50 border border-slate-50 rounded-2xl py-3 pl-7 pr-3 text-xs font-black text-slate-800 focus:bg-white focus:ring-4 focus:ring-indigo-500/10 transition-all outline-none"
                                                 value={amount}
@@ -308,6 +311,7 @@ export default function BudgetPage() {
                                     </div>
                                     <div className="relative">
                                         <select
+                                            name="transactionCategory"
                                             className="w-full bg-slate-50/50 border border-slate-50 rounded-2xl py-3 px-4 text-[10px] font-black text-slate-800 uppercase tracking-widest appearance-none focus:bg-white transition-all outline-none"
                                             value={category}
                                             onChange={(e) => setCategory(e.target.value)}
@@ -433,6 +437,7 @@ export default function BudgetPage() {
                                                 <div className="flex gap-2">
                                                     <input
                                                         type="number"
+                                                        name="goalContribution"
                                                         placeholder="+ Contribution..."
                                                         className="flex-1 bg-slate-50 px-4 py-2 rounded-xl border border-slate-50 text-[9px] font-black uppercase tracking-widest outline-none focus:bg-white focus:ring-4 focus:ring-indigo-500/5"
                                                         onKeyDown={(e) => {
@@ -640,6 +645,7 @@ export default function BudgetPage() {
                                 <Wallet size={16} className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300" />
                                 <input
                                     type="number"
+                                    name="budgetLimit"
                                     value={newLimit}
                                     onChange={(e) => setNewLimit(e.target.value)}
                                     className="w-full bg-slate-50 rounded-[28px] py-4 pl-14 pr-8 text-lg font-black text-slate-900 outline-none focus:ring-4 focus:ring-indigo-600/10"
@@ -662,6 +668,7 @@ export default function BudgetPage() {
                         </div>
                         <div className="space-y-4">
                             <input
+                                name="goalTitle"
                                 placeholder="Objective Name..."
                                 value={goalTitle}
                                 onChange={(e) => setGoalTitle(e.target.value)}
@@ -671,6 +678,7 @@ export default function BudgetPage() {
                                 <span className="absolute left-6 top-1/2 -translate-y-1/2 font-black text-slate-300 text-xs">$</span>
                                 <input
                                     type="number"
+                                    name="goalTarget"
                                     placeholder="Target Volume..."
                                     value={goalTarget}
                                     onChange={(e) => setGoalTarget(e.target.value)}
@@ -694,6 +702,7 @@ export default function BudgetPage() {
                         </div>
                         <div className="space-y-4">
                             <input
+                                name="autoStreamName"
                                 placeholder="Stream Name..."
                                 value={autoTitle}
                                 onChange={(e) => setAutoTitle(e.target.value)}
@@ -704,6 +713,7 @@ export default function BudgetPage() {
                                     <span className="absolute left-4 top-1/2 -translate-y-1/2 font-black text-slate-300 text-xs">$</span>
                                     <input
                                         type="number"
+                                        name="autoAmount"
                                         placeholder="0.00"
                                         value={autoAmount}
                                         onChange={(e) => setAutoAmount(e.target.value)}
@@ -711,6 +721,7 @@ export default function BudgetPage() {
                                     />
                                 </div>
                                 <select
+                                    name="autoFrequency"
                                     value={autoFreq}
                                     onChange={(e) => setAutoFreq(e.target.value as any)}
                                     className="bg-slate-50 rounded-2xl py-4 px-4 text-[10px] font-black text-slate-600 outline-none focus:ring-4 uppercase"

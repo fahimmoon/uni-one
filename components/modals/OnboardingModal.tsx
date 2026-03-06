@@ -51,6 +51,7 @@ export default function OnboardingModal() {
                             </div>
                             <input
                                 type="text"
+                                name="userName"
                                 required
                                 autoFocus
                                 placeholder={t("Enter your name...", "اپنا نام درج کریں...")}

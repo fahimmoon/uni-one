@@ -347,6 +347,7 @@ export default function EnhancedSchedule() {
                             <div className="relative group/search flex-1 min-w-0">
                                 <Search size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within/search:text-indigo-500 transition-colors" />
                                 <input
+                                    name="scheduleSearch"
                                     placeholder={t("Filter Matrices...", "فلٹر...")}
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}

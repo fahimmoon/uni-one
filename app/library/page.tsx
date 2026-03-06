@@ -20,6 +20,7 @@ export default function LibraryPage() {
                 <div className="relative flex-1 group">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-hover:text-violet-500 transition-colors" size={16} />
                     <input
+                        name="librarySearch"
                         title={t("Search Books", "کتابیں تلاش کریں")}
                         className="w-full bg-white border border-slate-100 rounded-[24px] py-4 pl-12 pr-6 text-sm font-semibold outline-none focus:border-violet-500/20 shadow-xl shadow-slate-900/5 transition-all placeholder:text-slate-300"
                         placeholder={t("Scan 10k+ Resources...", "وسائل تلاش کریں...")}

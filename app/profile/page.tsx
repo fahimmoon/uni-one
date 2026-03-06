@@ -97,6 +97,7 @@ export default function ProfilePage() {
                             <div className="space-y-1">
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("Full Name", "پورا نام")}</label>
                                 <input
+                                    name="fullName"
                                     title={t("Name", "نام")}
                                     value={editData.name}
                                     onChange={e => setEditData({ ...editData, name: e.target.value })}
@@ -106,6 +107,7 @@ export default function ProfilePage() {
                             <div className="space-y-1">
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("Institution", "ادارہ")}</label>
                                 <input
+                                    name="institution"
                                     title={t("University", "یونیورسٹی")}
                                     value={editData.university}
                                     onChange={e => setEditData({ ...editData, university: e.target.value })}
@@ -116,6 +118,7 @@ export default function ProfilePage() {
                                 <div className="space-y-1">
                                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("Major", "میجر")}</label>
                                     <input
+                                        name="major"
                                         title={t("Major", "میجر")}
                                         value={editData.major}
                                         onChange={e => setEditData({ ...editData, major: e.target.value })}
@@ -125,6 +128,7 @@ export default function ProfilePage() {
                                 <div className="space-y-1">
                                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("Sem", "سمسٹر")}</label>
                                     <input
+                                        name="semester"
                                         title={t("Semester", "سمسٹر")}
                                         type="number"
                                         value={editData.semester}

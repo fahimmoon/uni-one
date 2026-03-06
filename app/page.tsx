@@ -284,6 +284,7 @@ export default function Home() {
           </div>
           <input
             type="text"
+            name="globalSearch"
             placeholder={t("Alpha Search: Modules, Tasks, Finance...", "الفا سرچ: ماڈیولز، ٹاسک، فنانس...")}
             className="w-full bg-white/10 backdrop-blur-3xl border border-white/10 rounded-[28px] py-6 pl-16 pr-24 text-sm font-black text-white placeholder:text-slate-500 outline-none focus:ring-4 focus:ring-blue-600/20 focus:bg-white/15 focus:border-blue-400/50 transition-all shadow-2xl"
             value={searchQuery}

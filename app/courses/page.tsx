@@ -73,6 +73,7 @@ export default function CoursesPage() {
                     <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400" size={18} strokeWidth={2.5} />
                     <input
                         type="text"
+                        name="courseSearch"
                         placeholder={t("Search by course name or code...", "کورس کا نام یا کوڈ تلاش کریں...")}
                         className="w-full bg-white border border-slate-50 rounded-[32px] py-4 pl-14 pr-6 text-sm focus:outline-none focus:ring-4 focus:ring-indigo-500/10 transition-all font-bold text-slate-700 shadow-xl shadow-slate-200/30"
                         value={searchQuery}

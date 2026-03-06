@@ -160,6 +160,7 @@ export default function StudyPage() {
                             </div>
                             <div>
                                 <select
+                                    name="studyCourse"
                                     className="w-full bg-transparent border-none text-sm font-black text-slate-800 outline-none appearance-none cursor-pointer"
                                     value={selectedCourseId}
                                     onChange={(e) => setSelectedCourseId(e.target.value)}

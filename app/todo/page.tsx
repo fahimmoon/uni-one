@@ -132,6 +132,7 @@ export default function TodoPage() {
                         <input
                             title={t("New Mission", "نیا مشن")}
                             type="text"
+                            name="todoText"
                             placeholder={t("Enter your next mission...", "اپنا اگلا مشن درج کریں...")}
                             className="flex-1 bg-transparent border-none py-3.5 md:py-4 px-4 md:px-6 text-sm font-black text-slate-800 focus:ring-0 outline-none placeholder:text-slate-300 min-w-[200px]"
                             value={newTodoText}
@@ -172,6 +173,7 @@ export default function TodoPage() {
                             <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em]">{t("Link to Course", "کورس کے ساتھ لنک کریں")}:</span>
                             <div className="relative">
                                 <select
+                                    name="todoCourse"
                                     className="w-full bg-slate-50 text-[9px] md:text-[10px] font-black py-3 px-3 md:px-5 rounded-xl border border-slate-100 outline-none focus:ring-4 focus:ring-indigo-500/10 text-slate-600 appearance-none uppercase tracking-widest cursor-pointer"
                                     value={selectedCourseId}
                                     onChange={(e) => setSelectedCourseId(e.target.value)}
@@ -191,6 +193,7 @@ export default function TodoPage() {
                             <div className="relative">
                                 <input
                                     type="date"
+                                    name="todoDueDate"
                                     className="w-full bg-slate-50 text-[9px] md:text-[10px] font-black py-3 px-3 md:px-5 rounded-xl border border-slate-100 outline-none focus:ring-4 focus:ring-indigo-500/10 text-slate-600 uppercase tracking-widest cursor-pointer"
                                     value={dueDate.split('T')[0] || ""}
                                     onChange={(e) => setDueDate(e.target.value ? new Date(e.target.value).toISOString() : "")}

@@ -84,6 +84,7 @@ export default function CreateCoursePage() {
                         <div className="grid grid-cols-2 gap-4">
                             <input
                                 type="text"
+                                name="courseName"
                                 placeholder={t("Course Name", "کورس کا نام")}
                                 className="w-full bg-slate-50 border-none rounded-2xl py-4 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none"
                                 value={courseData.name}
@@ -91,6 +92,7 @@ export default function CreateCoursePage() {
                             />
                             <input
                                 type="text"
+                                name="courseCode"
                                 placeholder={t("Course Code", "کورس کوڈ")}
                                 className="w-full bg-slate-50 border-none rounded-2xl py-4 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none"
                                 value={courseData.code}
@@ -99,6 +101,7 @@ export default function CreateCoursePage() {
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <select
+                                name="courseCredits"
                                 aria-label={t("Course Credits", "کورس کریڈٹس")}
                                 className="w-full bg-slate-50 border-none rounded-2xl py-4 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none appearance-none"
                                 value={courseData.credits}
@@ -108,6 +111,7 @@ export default function CreateCoursePage() {
                             </select>
                             <input
                                 type="color"
+                                name="courseColor"
                                 aria-label={t("Course Accent Color", "کورس کا رنگ")}
                                 className="w-full h-14 bg-slate-50 border-none rounded-2xl p-1 cursor-pointer focus:ring-2 focus:ring-blue-100 transition-all"
                                 value={courseData.color}
@@ -144,6 +148,7 @@ export default function CreateCoursePage() {
                                     <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black">{idx + 1}</span>
                                     <input
                                         type="text"
+                                        name="moduleTitle"
                                         placeholder={t("Module Title", "ماڈیول کا عنوان")}
                                         className="flex-1 bg-transparent border-none text-sm font-black text-slate-800 focus:ring-0 outline-none p-0"
                                         value={module.title}
@@ -151,6 +156,7 @@ export default function CreateCoursePage() {
                                     />
                                 </div>
                                 <textarea
+                                    name="moduleContent"
                                     placeholder={t("Module Content...", "ماڈیول کا مواد...")}
                                     className="w-full bg-white border-none rounded-2xl py-4 px-5 text-xs font-medium text-slate-600 focus:ring-2 focus:ring-blue-100 transition-all min-h-[120px]"
                                     value={module.content}

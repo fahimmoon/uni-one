@@ -114,6 +114,7 @@ export default function CourseDetailClient({ params }: { params: Promise<{ id: s
                                 <div className="grid grid-cols-2 gap-4">
                                     <input
                                         type="text"
+                                        name="noteTitle"
                                         placeholder="Topic Title"
                                         className="bg-slate-50 border-none rounded-2xl py-3 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none"
                                         value={newNote.title}
@@ -121,6 +122,7 @@ export default function CourseDetailClient({ params }: { params: Promise<{ id: s
                                     />
                                     <input
                                         type="text"
+                                        name="noteTopic"
                                         placeholder="Subject Topic"
                                         className="bg-slate-50 border-none rounded-2xl py-3 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none"
                                         value={newNote.topic}
@@ -129,6 +131,7 @@ export default function CourseDetailClient({ params }: { params: Promise<{ id: s
                                 </div>
                                 <input
                                     type="number"
+                                    name="noteWeek"
                                     placeholder="Week #"
                                     className="w-full bg-slate-50 border-none rounded-2xl py-3 px-5 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-blue-100 transition-all outline-none"
                                     value={newNote.week}
@@ -150,6 +153,7 @@ export default function CourseDetailClient({ params }: { params: Promise<{ id: s
                                         ))}
                                     </div>
                                     <textarea
+                                        name="noteContent"
                                         placeholder="Unleash your knowledge here..."
                                         className="w-full bg-white border-none rounded-b-3xl py-5 px-6 text-sm font-medium text-slate-600 focus:ring-0 transition-all min-h-[200px]"
                                         value={newNote.content}

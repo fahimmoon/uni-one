@@ -179,6 +179,7 @@ export default function DetailedGradesPage() {
                                 <input
                                     type="number"
                                     step="0.1"
+                                    name="targetGPA"
                                     title="Target GPA"
                                     value={gpaSimulation.targetGPA}
                                     onChange={(e) => updateGPASimulation({ targetGPA: parseFloat(e.target.value) })}
@@ -192,6 +193,7 @@ export default function DetailedGradesPage() {
                         <h4 className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 md:mb-5">Add Hypothetical Grades</h4>
                         <div className="flex flex-wrap md:flex-nowrap gap-2 md:gap-3 mb-6">
                             <input
+                                name="simCourseName"
                                 placeholder="Course Name"
                                 title="Course Name"
                                 value={newSimName}
@@ -200,6 +202,7 @@ export default function DetailedGradesPage() {
                             />
                             <div className="flex gap-2 flex-1 md:flex-none">
                                 <select
+                                    name="simCredits"
                                     value={newSimCredits}
                                     title="Credits"
                                     onChange={e => setNewSimCredits(parseInt(e.target.value))}
@@ -208,6 +211,7 @@ export default function DetailedGradesPage() {
                                     {[1, 2, 3, 4].map(cr => <option key={cr} value={cr}>{cr} Cr</option>)}
                                 </select>
                                 <select
+                                    name="simGrade"
                                     value={newSimGrade}
                                     title="Expected Grade"
                                     onChange={e => setNewSimGrade(e.target.value)}
