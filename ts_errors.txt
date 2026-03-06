@@ -1,0 +1,5 @@
+﻿app/courses/[id]/page.tsx(35,36): error TS2345: Argument of type '{ title: string; topic: string; content: string; week: number; }' is not assignable to parameter of type 'Note'.
+  Type '{ title: string; topic: string; content: string; week: number; }' is missing the following properties from type 'Note': id, subject, createdAt
+app/exams/page.tsx(201,37): error TS2345: Argument of type '{ courseId: string; name: string; type: any; date: string; time: string; location: string; notes: string; isCompleted: false; }' is not assignable to parameter of type 'Omit<Exam, "id">'.
+  Property 'courseName' is missing in type '{ courseId: string; name: string; type: any; date: string; time: string; location: string; notes: string; isCompleted: false; }' but required in type 'Omit<Exam, "id">'.
+app/study/page.tsx(32,17): error TS2353: Object literal may only specify known properties, and 'id' does not exist in type 'Omit<StudySession, "id">'.
